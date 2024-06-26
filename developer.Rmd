@@ -61,11 +61,25 @@ TODO write.
 
 ### Using RStudio to Prepare a Pull Request
 
-TODO write.
+RStudio does not have a built-in method of creating a pull request. However, it has a built-in terminal that can be used to push changes to a forked repository with a GitHub remote origin. GitHub must then be used to create a pull request.
+1. On GitHub: Click the “Fork” button on the project to make changes to.
+2. On RStudio: Create a new project and use Version Control with Git. Copy and paste the repository URL of your fork of the project.
+3. Add the original repository as an upstream version. This should be done in RStudio’s built-in terminal. Type in: git remote add upstream https://github.com/cotterell/tdcm.git
+4. Create and checkout a branch in which you will make changes.
+5. Commit your changes using the “Git” tab on RStudio. Ensure that you are on the branch with your changes.
+6. Push to your forked repository in the terminal: git push origin <branch name>
+7. On GitHub: Click the green icon in the top left of your repository page and create a pull request with a message describing your changes.
 
 ### Using a Terminal to Prepare a Pull Request
 
-TODO write.
+Git supports the creation of a pull request using the “git-request-pull” command.
+1. Once you have forked the original project and cloned it,  add the original repository as an upstream version:  git remote add upstream https://github.com/cotterell/tdcm.git
+2. Commit your changes on a separate branch and push to the forked repository.
+3. Create a pull request: git request-pull [-p] <start> <URL> [<end>]
+  -p: Include patch text in your request.
+  <start>: The commit to start at. This will be a commit in the upstream (original) version.
+  <URL>: The repository URL to pull from; your forked repository.
+  <end>: The commit to end at. This will be the final commit in your forked repository from which changes will be drawn.
 
 ## Policies
 
