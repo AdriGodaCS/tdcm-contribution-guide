@@ -20,5 +20,5 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: If you have any relevant log output, please paste it here!
       render: shell
