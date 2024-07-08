@@ -44,6 +44,7 @@ TODO write.
 TODO write.
 
 ### Code Contributions
+
 For your contribution to be accepted, it needs to follow a consistent style, be well documented, 
 and include unit tests. You can ensure your code meets our standards by following the steps 
 outlined below. All package instructions are written for use in RStudio.
@@ -58,6 +59,7 @@ Packages: [styler](https://cran.r-project.org/web/packages/styler/index.html),
 [covr](https://cran.r-project.org/web/packages/covr/index.html)
 
 #### 1. Code Style
+
 Code style is how your code looks and it's an important part of contributing to open source 
 projects. Using a consistent style makes your code easier for yourself and future collaborators to 
 understand. Follow the steps below for each file in your pull request.
@@ -67,6 +69,7 @@ understand. Follow the steps below for each file in your pull request.
 3. Search for "style actvive file" and click on it.
 
 #### 2. Documentation
+
 Accurate documentation is essential for maintaining an open source project. It allows developers to 
 quickly understand the purpose, functionality, and usage of different parts of the codebase, making 
 it easier for new collaborators to contribute and saving developers time when reviewing pull 
