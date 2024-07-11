@@ -80,6 +80,9 @@ Git supports the creation of a pull request using the “git-request-pull” com
   <start>: The commit to start at. This will be a commit in the upstream (original) version.
   <URL>: The repository URL to pull from; your forked repository.
   <end>: The commit to end at. This will be the final commit in your forked repository from which changes will be drawn.
+  
+#### Continuous Integration and Pull Requests
+* This TDCM expansion utilizes continuous integration via GitHub’s **“Actions” column**. This means that a script within the project will automatically run various **checks** on a pull request and notify you of any problems on your **GitHub profile**. Once these are resolved, provided that they do not require further inspection, your pull request will be automatically integrated.  
 
 ## Policies
 
