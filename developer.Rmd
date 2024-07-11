@@ -37,11 +37,35 @@ TODO write.
 
 ### Issue Reporting
 
-TODO write.
+If you notice any errors, bugs, or parts of the package that do not work as expected, please use the Issues feature on GitHub! This will allow us to respond promptly and keep all required fixes in one place. To do so, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
+
+1. Navigate to the [TDCM GitHub Issues page](https://github.com/cotterell/tdcm/issues)
+2. Use the search box to see if the issue you encountered has already been reported.
+    * If the issue has been reported, leave a reply with as much detail as possible explaining how you encountered the issue. Try to be as specific as possible so the issue can be easily reproduced!
+    * If the issue has not been reported yet, you can make your own!:
+        1. Click the green “New Issue” button
+        2. Click “Get Started” next to “Bug Report” [TODO: make this link once templates are added to main repository]
+        3. Click “Submit New Issue” once you’ve finished filling out the form!
+3. Once you’ve reported the issue, developers may reply to your report asking for more details. Please provide as much information as possible to help ensure the issue is resolved quickly!
 
 ### Feature Request
 
-TODO write.
+Have any features you’d like us to add? Please let us know using the Issues feature on GitHub!
+
+> Issues is a feature on GitHub that streamlines communication between users and developers and consolidates all project tasks in one place. While this of course includes bugs, it is often used for managing feature requests and improvements, allowing it to serve as a "To-Do List" developers can use to know what they should be focusing on.
+
+To create an Issue, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
+
+1. Navigate to the [TDCM GitHub Issues page](https://github.com/cotterell/tdcm/issues)
+2. Use the search box to see if the feature you’re thinking of has already been requested.
+	* If there is already a request, please interact with it!
+		* You can use the emoji icon to add a reaction, such as a “thumbs up” to show your support! This will let us know which features to prioritize by showing how many people want a particular feature. 
+		* Additionally, feel free to voice your opinions in the replies of the request page! You can add additional details you’d like to see implemented, or simply express your desire for the feature to be added!
+	* If there is no existing request for the feature, you can make your own:
+		1. Click the green “New Issue” button
+		2. Click “Get Started” next to “Feature Request” [TODO: make this a link once templates are added to main repository]
+		3. Click “Submit New Issue” once you’ve finished filling out the form!
+3. Once you’ve posted your feature request, developers may reply to your request asking for more details. Please provide as much information as possible so the developers know what you’re looking for!
 
 ### Code Contributions
 
