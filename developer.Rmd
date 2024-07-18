@@ -37,15 +37,116 @@ TODO write.
 
 ### Issue Reporting
 
-TODO write.
+If you notice any errors, bugs, or parts of the package that do not work as expected, please use the Issues feature on GitHub! This will allow us to respond promptly and keep all required fixes in one place. To do so, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
+
+1. Navigate to the [TDCM GitHub Issues page](https://github.com/cotterell/tdcm/issues)
+2. Use the search box to see if the issue you encountered has already been reported.
+    * If the issue has been reported, leave a reply with as much detail as possible explaining how you encountered the issue. Try to be as specific as possible so the issue can be easily reproduced!
+    * If the issue has not been reported yet, you can make your own!:
+        1. Click the green “New Issue” button
+        2. Click “Get Started” next to “Bug Report” [TODO: make this link once templates are added to main repository]
+        3. Click “Submit New Issue” once you’ve finished filling out the form!
+3. Once you’ve reported the issue, developers may reply to your report asking for more details. Please provide as much information as possible to help ensure the issue is resolved quickly!
 
 ### Feature Request
 
-TODO write.
+Have any features you’d like us to add? Please let us know using the Issues feature on GitHub!
+
+> Issues is a feature on GitHub that streamlines communication between users and developers and consolidates all project tasks in one place. While this of course includes bugs, it is often used for managing feature requests and improvements, allowing it to serve as a "To-Do List" developers can use to know what they should be focusing on.
+
+To create an Issue, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
+
+1. Navigate to the [TDCM GitHub Issues page](https://github.com/cotterell/tdcm/issues)
+2. Use the search box to see if the feature you’re thinking of has already been requested.
+	* If there is already a request, please interact with it!
+		* You can use the emoji icon to add a reaction, such as a “thumbs up” to show your support! This will let us know which features to prioritize by showing how many people want a particular feature. 
+		* Additionally, feel free to voice your opinions in the replies of the request page! You can add additional details you’d like to see implemented, or simply express your desire for the feature to be added!
+	* If there is no existing request for the feature, you can make your own:
+		1. Click the green “New Issue” button
+		2. Click “Get Started” next to “Feature Request” [TODO: make this a link once templates are added to main repository]
+		3. Click “Submit New Issue” once you’ve finished filling out the form!
+3. Once you’ve posted your feature request, developers may reply to your request asking for more details. Please provide as much information as possible so the developers know what you’re looking for!
 
 ### Code Contributions
 
-TODO write.
+For your contribution to be accepted, it needs to follow a consistent style, be well documented, 
+and include unit tests. You can ensure your code meets our standards by following the steps 
+outlined below. All package instructions are written for use in RStudio.
+
+To install all necessary packages, run the following command:
+```{r, include = TRUE}
+install.packages(c("styler", "roxygen2", "testthat", "covr"))
+```
+Packages: [styler](https://cran.r-project.org/web/packages/styler/index.html), 
+[roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html), 
+[testthat](https://cran.r-project.org/web/packages/testthat/index.html), 
+[covr](https://cran.r-project.org/web/packages/covr/index.html)
+
+#### 1. Code Style
+
+Code style is how your code looks and it's an important part of contributing to open source 
+projects. Using a consistent style makes your code easier for yourself and future collaborators to 
+understand. Follow the steps below for each file in your pull request.
+
+1. Open a file to style.
+2. Press Ctrl + Shift + P to open the command palette.
+3. Search for "style actvive file" and click on it.
+
+#### 2. Documentation
+
+Accurate documentation is essential for maintaining an open source project. It allows developers to 
+quickly understand the purpose, functionality, and usage of different parts of the codebase, making 
+it easier for new collaborators to contribute and saving developers time when reviewing pull 
+requests. Follow the steps below for each function you write.
+
+1. Select Build > Configure Build Tools.
+2. Check the box for "Generate documentation with Roxygen" and click OK (on both windows).
+3. Put your cursor inside the body of a function you want to generate documentation for.
+4. Select Code > Insert Roxygen Skeleton.
+5. Edit the Roxygen comment with a description of your code.
+
+#### 3. Unit Tests
+
+A unit test is a function that validates the expected behavior of another function. The goal is to 
+make sure that each part of your code works independently before merging it with a larger codebase.
+
+1. Write a function. Here's a simple example:
+```{r, include = TRUE}
+#' Multiplies two numbers.
+#'
+#' @param y number to be multiplied
+#' @param x number to be multiplied
+#'
+#' @return result the result
+multiply <- function(x, y) {
+  result <- x * y
+  return(result)
+}
+```
+
+2. Write a unit test that varifies the accuracy of your function. A list of function expectations 
+can be found [here](https://testthat.r-lib.org/reference/). Create a script for your tests and put 
+it in the ```test/testthat``` directory.
+
+```{r, include = TRUE}
+#' Usage
+test_that(desc, code)
+
+#' Example
+test_that("multiply works", {
+  expect_equal(multiply(2, 4), 8)
+})
+```
+
+3. Code coverage is the amount of code that is checked by your unit tests. A minimum coverage of 
+80% is required for contributions to TDCM. Run the following commands to view a list of all R 
+scripts in the package and their coverage, as well as the total coverage for the entire package. 
+Make sure all the scripts you wrote are above 80% before submitting a pull request.
+
+```{r, include = TRUE}
+> library(covr)
+> package_coverage()
+```
 
 ## Git & Pull Requests
 
@@ -53,11 +154,45 @@ TODO write.
 
 ### What is Git?
 
-TODO write.
+[Git](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) is a version control system that allows developers to track changes in their code over time. It's like a time machine for your project files, enabling you to save different versions (called "commits") of your code. Each commit records what changes were made, by whom, and when, making it easy to revert back to older versions if something goes wrong with the current code.
+
+This is a breakdown of key features and concepts in Git:
+[Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) (Repo): This is where all your project’s files and their history are stored. It can be located on your computer (local repository) or on a remote server (remote repository).
+[Commit](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository): A commit is like a snapshot of your project at a specific point in time. When you make changes to your files, you 'commit' these changes, which saves a record of what was altered, allowing you to track the evolution of your project.
+[Branch](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository): Branches allow you to create separate versions of your project within the same repository. You might use a branch to develop a new feature while keeping the main project (usually called the "master" or "main" branch) stable.
+[Merge](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository): When you've finished working in a branch, you can merge your changes back into the main branch. This combines the histories of both branches, integrating the new features or changes into the main project.
+[Pull](https://git-scm.com/book/en/v2/GitHub-Maintaining-a-Project): Pulling refers to downloading changes from a remote repository to your local one. This is useful when working in teams, as it lets you see and integrate the changes made by others.
+[Push](https://git-scm.com/docs/git-push): Pushing refers to uploading your local repository changes to a remote repository. This is how you share your work with others or back up your current state to a remote location.
+Using [Git](https://git-scm.com/video/what-is-git), [multiple](https://git-scm.com/video/what-is-version-control) developers can work on the same project simultaneously without interfering with each other’s work, as they can work in different branches and merge changes only when ready. This collaborative feature, along with the ability to track every change, makes Git an essential tool for modern software development.
+
+What is the difference between Git and Github?
+
+[Git](https://git-scm.com/):
+Definition: Git is a version control system (VCS) that helps you track changes in your code files. It allows multiple developers to work together on the same project effectively and efficiently by providing tools to manage differing versions of code.
+Functionality: Git is used to create branches, handle merges, revert to previous states, and more, directly from your local machine or a server without needing an internet connection.
+Local vs. Remote: Git operates primarily on your local system, managing your local repository. However, it can synchronize with remote repositories.
+[GitHub](https://github.com/):
+Definition: GitHub is a hosting service for Git repositories. It's a platform where you can upload your Git repositories and collaborate with others.
+Functionality: Beyond the basic functionalities of Git, GitHub provides additional features such as bug tracking, feature requests, task management, and wikis for project documentation.
+Collaboration: GitHub is designed to facilitate easier collaboration among team members on a project. It offers graphical tools for managing pull requests, code reviews, and even project management tools like issues and project boards.
+In essence, Git is the tool that enables version control, while GitHub is a service that hosts your repositories and adds extra features to enhance collaboration among team members. Both work hand-in-hand to support the development process, but they serve different roles within that framework.
+
+
+
 
 ### What is a Pull Request?
 
-TODO write.
+A [Pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) Request (PR), also known as a [Merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) Request in some systems like GitLab, is a feature used in Git repositories that lets developers notify team members about changes they've pushed to a branch in a repository on platforms like GitHub, Bitbucket, or GitLab. Essentially, it's a request to review and then merge this branch into another branch, typically the main project branch.
+Here's how it works in simple terms:
+[Branch Creation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request): First, a developer creates a branch from the main codebase to work on a new feature, a bug fix, or any updates. This separation ensures that the main codebase remains unaffected until the new changes are reviewed and approved.
+[Making Changes and Committing](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository): The developer makes necessary changes in this new branch, commits these changes, and pushes the branch to a remote repository.
+Opening a Pull Request: Once the branch is updated on the remote repository, the developer opens a pull request. This PR is essentially a request to the rest of the team to review the changes made in the branch before it gets merged into the main branch.
+Review and Discussion: Team members review the changes, discuss potential improvements, and may request further [changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests) if needed. This process is crucial for maintaining code quality and ensuring that the integration aligns with the project's overall direction.
+Approval and [Merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github): After the changes are reviewed and approved by the necessary team members or according to the project's guidelines, the pull request can be merged. This means that the changes in the branch will be integrated into the target branch, usually the main or master branch.
+Closure and Cleanup: Once merged, the pull request is closed, and it's common to delete the branch to keep the repository clean and manageable.
+Pull Requests are a vital part of the collaborative development process, enabling transparency, improving code quality, and helping manage contributions to a project efficiently. They facilitate a peer review system which is beneficial for both team cohesion and project integrity.
+
+
 
 ### Using RStudio to Prepare a Pull Request
 
@@ -72,7 +207,7 @@ RStudio does not have a built-in method of creating a pull request. However, it 
 
 ### Using a Terminal to Prepare a Pull Request
 
-Git supports the creation of a pull request using the “git-request-pull” command.
+Git supports the creation of a pull request using the “[git-request-pull](https://git-scm.com/docs/git-request-pull)" command. (Note: This only generates a nicely formatted pull request for you to send to the owner of the original repository. It does not send the request itself. This should be done using GitHub).
 1. Once you have forked the original project and cloned it,  add the original repository as an upstream version:  git remote add upstream https://github.com/cotterell/tdcm.git
 2. Commit your changes on a separate branch and push to the forked repository.
 3. Create a pull request: git request-pull [-p] <start> <URL> [<end>]
