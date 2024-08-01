@@ -33,7 +33,7 @@ tdcm_maintainer_email <- tdcm_maintainer["email"]
 
 ## Types of Contributions
 
-Would you like to help contribute to TDCM? We're more than happy to work with our community to improve TDCM and make it better for our users!
+Would you like to help contribute to TDCM? We're more than happy to work with our community to improve our user experience!
 There are various ways to contribute: 
 
 * Issue Reporting - report any bugs or issues you come across so we can fix them!
