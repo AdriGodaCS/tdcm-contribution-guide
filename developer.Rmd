@@ -74,9 +74,7 @@ and include unit tests. You can ensure your code meets our standards by followin
 outlined below. All package instructions are written for use in RStudio.
 
 To install all necessary packages, run the following command:
-```{r, include = TRUE}
-install.packages(c("styler", "roxygen2", "testthat", "covr"))
-```
+
 Packages: [styler](https://cran.r-project.org/web/packages/styler/index.html), 
 [roxygen2](https://cran.r-project.org/web/packages/roxygen2/index.html), 
 [testthat](https://cran.r-project.org/web/packages/testthat/index.html), 
@@ -111,46 +109,23 @@ A unit test is a function that validates the expected behavior of another functi
 make sure that each part of your code works independently before merging it with a larger codebase.
 
 1. Write a function. Here's a simple example:
-```{r, include = TRUE}
-#' Multiplies two numbers.
-#'
-#' @param y number to be multiplied
-#' @param x number to be multiplied
-#'
-#' @return result the result
-multiply <- function(x, y) {
-  result <- x * y
-  return(result)
-}
-```
+
 
 2. Write a unit test that varifies the accuracy of your function. A list of function expectations 
 can be found [here](https://testthat.r-lib.org/reference/). Create a script for your tests and put 
 it in the ```test/testthat``` directory.
 
-```{r, include = TRUE}
-#' Usage
-test_that(desc, code)
 
-#' Example
-test_that("multiply works", {
-  expect_equal(multiply(2, 4), 8)
-})
-```
 
 3. Code coverage is the amount of code that is checked by your unit tests. A minimum coverage of 
 80% is required for contributions to TDCM. Run the following commands to view a list of all R 
 scripts in the package and their coverage, as well as the total coverage for the entire package. 
 Make sure all the scripts you wrote are above 80% before submitting a pull request.
 
-```{r, include = TRUE}
-> library(covr)
-> package_coverage()
-```
 
 ## Git & Pull Requests
 
-TODO write.
+The below section describes what Git is and how to use it to help contribute to this repository.
 
 ### What is Git?
 
@@ -207,15 +182,11 @@ RStudio does not have a built-in method of creating a pull request. However, it 
 
 ### Using a Terminal to Prepare a Pull Request
 
-Git supports the creation of a pull request using the “[git-request-pull](https://git-scm.com/docs/git-request-pull)" command. (Note: This only generates a nicely formatted pull request for you to send to the owner of the original repository. It does not send the request itself. This should be done using GitHub).
-1. Once you have forked the original project and cloned it,  add the original repository as an upstream version:  git remote add upstream https://github.com/cotterell/tdcm.git
-2. Commit your changes on a separate branch and push to the forked repository.
-3. Create a pull request: git request-pull [-p] <start> <URL> [<end>]
-  -p: Include patch text in your request.
-  <start>: The commit to start at. This will be a commit in the upstream (original) version.
-  <URL>: The repository URL to pull from; your forked repository.
-  <end>: The commit to end at. This will be the final commit in your forked repository from which changes will be drawn.
-  
+You can use [GitHub’s CLI (downloadable)](https://cli.github.com) to fork a repository and create a pull request within it.
+Fork the original project:[[gh repo fork [<repository>](https://cli.github.com/manual/gh_repo_fork) 
+Commit your changes on a separate branch.
+Create a pull request: [gh pr create](https://cli.github.com/manual/gh_pr_create) 
+
 #### Continuous Integration and Pull Requests
 * This TDCM expansion utilizes continuous integration via GitHub’s **“Actions” column**. This means that a script within the project will automatically run various **checks** on a pull request and notify you of any problems on your **GitHub profile**. Once these are resolved, provided that they do not require further inspection, your pull request will be automatically integrated.  
 
