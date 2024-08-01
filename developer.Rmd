@@ -203,7 +203,119 @@ TODO write. For example, do not modify the `DESCRIPTION` file unless you are the
 
 ## Guidelines
 
-TODO write.
+General Guidelines
+
+
+Adherence to Standards:
+
+- Follow the coding style and documentation standards outlined in this guide.
+
+- Ensure your contributions align with the project’s goals and design principles.
+
+
+Quality Over Quantity:
+
+- Focus on delivering high-quality contributions that are well-tested and well-documented.
+
+- Avoid making changes that are unnecessary or do not add significant value to the project.
+
+Respect and Collaboration:
+
+- Communicate respectfully and professionally with other contributors and maintainers.
+
+- Be open to feedback and willing to make revisions based on reviews.
+
+Code Contributions
+Consistency:
+
+- Use consistent code style throughout your contributions. 
+Adhere to the conventions used in the existing codebase.
+
+- Use the styler package to format your code.
+
+Documentation:
+
+- Document your code using roxygen2 comments. 
+
+- This helps other developers understand the purpose and usage of your functions.
+
+- Update any relevant documentation files if your changes affect the usage or behavior of the package.
+
+Testing:
+
+- Write unit tests for your code using the testthat package to ensure it works as expected.
+
+- Aim for a minimum of 80% code coverage for your contributions. Use the covr package to check coverage.
+
+Submission:
+
+- Make sure your code passes all checks and tests before submitting a pull request.
+
+- Provide a clear and detailed description of the changes in your pull request.
+
+Issue Reporting
+Clarity and Detail:
+
+- Provide a clear and concise description of the issue.
+
+- Include details such as steps to reproduce the issue, expected behavior, and any relevant screenshots or error messages.
+Existing Issues:
+
+- Before creating a new issue, check the existing issues to see if the problem has already been reported.
+
+- If the issue already exists, add any additional information you have and indicate your interest in a resolution.
+
+Feature Requests
+Feasibility and Impact:
+
+- Ensure that your feature request is feasible and aligns with the project’s goals.
+
+- Clearly explain the benefits and potential impact of the proposed feature.
+
+
+Community Involvement:
+
+- Engage with the community by participating in discussions about the feature.
+
+- Be responsive to feedback and willing to refine your proposal based on community input.
+
+Git & Pull Requests
+
+Branch Management:
+
+- Create a new branch for each feature or bug fix to keep your work organized and separate from the main codebase.
+
+- Use descriptive names for your branches to indicate their purpose.
+
+Commit Practices:
+
+- Write clear and concise commit messages that describe the changes made.
+
+- Make small, incremental commits rather than large, monolithic ones.
+
+Pull Request Submission:
+
+- Ensure your branch is up-to-date with the main branch before opening a pull request.
+
+- Provide a detailed description of the changes, including the problem being addressed and the solution implemented.
+
+- Be responsive to feedback from reviewers and make necessary revisions promptly.
+
+Continuous Integration
+Automated Checks:
+
+- Ensure your code passes all automated checks configured in the GitHub Actions workflows.
+
+- Address any issues reported by the CI tools before requesting a review.
+
+Maintaining Build Health:
+
+- Avoid breaking changes that could disrupt the build or affect other contributors.
+
+- Regularly sync your branch with the main branch to incorporate the latest changes and resolve conflicts.
+
+By following these guidelines, you contribute to maintaining the quality and integrity of the TDCM project, ensuring a positive experience for all contributors and users.
+
 
 ## Maintainer Notes
 
