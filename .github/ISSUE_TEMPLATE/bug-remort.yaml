@@ -20,8 +20,8 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: What were you doing when you came across this bug?
-      description: Briefly explain to help us reproduct the bug
+      label: How did you come across this bug?
+      description: Briefly explain what you were doing leading up to the bug to help us reproduce it!
     validations:
       required: true
   - type: textarea
