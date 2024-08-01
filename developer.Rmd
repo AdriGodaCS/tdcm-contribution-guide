@@ -33,16 +33,23 @@ tdcm_maintainer_email <- tdcm_maintainer["email"]
 
 ## Types of Contributions
 
-TODO write.
+Would you like to help contribute to TDCM? We're more than happy to work with our community to improve TDCM and make it better for our users!
+There are various ways to contribute: 
+
+* Issue Reporting - report any bugs or issues you come across so we can fix them!
+* Feature Requests - let us know about any features you'd like to see in TDCM!
+* Code Contributions - help us work on TDCM by fixing bugs or adding features yourself!
+
+You can learn more about each of these types of contributions below!
 
 ### Issue Reporting
 
-If you notice any errors, bugs, or parts of the package that do not work as expected, please use the Issues feature on GitHub! This will allow us to respond promptly and keep all required fixes in one place. To do so, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
+If you notice any errors, bugs, or unexpected behaviors in the package, please use the Issues feature on GitHub! This will allow us to respond promptly and keep all required fixes in one place. To do so, log in to your GitHub account (or create one if you do not already have one) and follow the instructions below:
 
 1. Navigate to the [TDCM GitHub Issues page](https://github.com/cotterell/tdcm/issues)
 2. Use the search box to see if the issue you encountered has already been reported.
     * If the issue has been reported, leave a reply with as much detail as possible explaining how you encountered the issue. Try to be as specific as possible so the issue can be easily reproduced!
-    * If the issue has not been reported yet, you can make your own!:
+    * If the issue has not been reported yet, make your own!:
         1. Click the green “New Issue” button
         2. Click “Get Started” next to “Bug Report” [TODO: make this link once templates are added to main repository]
         3. Click “Submit New Issue” once you’ve finished filling out the form!
